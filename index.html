@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DummyWar by GuFugu</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #121212;
+            color: #d1d1d1;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 860px;
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2a2a2a;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0 0 4px 0;
+            color: #fff;
+            font-weight: 700;
+        }
+        .header .author {
+            color: #888;
+            font-size: 14px;
+        }
+        .btn-support {
+            background: #fa5c5c;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .screenshots {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .screenshots img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #2a2a2a;
+            background: #1e1e1e;
+        }
+        .content h2 {
+            color: #fff;
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            font-weight: 600;
+        }
+        .content p {
+            line-height: 1.6;
+            color: #b0b0b0;
+            margin: 0 0 12px 0;
+            font-size: 15px;
+        }
+        .features {
+            margin: 25px 0;
+        }
+        .features h3 {
+            color: #fff;
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features li {
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+            color: #b0b0b0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .features li::before {
+            content: "—";
+            color: #fa5c5c;
+            position: absolute;
+            left: 0;
+        }
+        .download-box {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
+        }
+        .download-box h3 {
+            margin: 0 0 8px 0;
+            color: #fff;
+            font-size: 18px;
+        }
+        .download-box p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            color: #888;
+        }
+        .download-btn {
+            display: block;
+            background: #fa5c5c;
+            color: #fff;
+            padding: 14px;
+            font-size: 17px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .download-btn:hover {
+            background: #e04b4b;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>DummyWar</h1>
+                <div class="author">by GuFugu</div>
+            </div>
+            <a href="#" class="btn-support">Support this game</a>
+        </div>
+
+        <div class="screenshots">
+            <img src="https://img.itch.zone/aW1hZ2UvMjU3MDU4OS8xNTM4MjU2NS5wbmc=/original/x2H2%2B1.png" alt="DummyWar gameplay 1">
+            <img src="https://img.itch.zone/aW1hZ2UvMjU3MDU4OS8xNTM4MjU2Ni5wbmc=/original/k4W8L4.png" alt="DummyWar gameplay 2">
+        </div>
+
+        <div class="content">
+            <h2>DummyWar — Alpha Prototype</h2>
+            <p>Экспериментальная военная песочница: расставляйте бойцов двух команд, наблюдайте за боями под управлением ИИ или вселяйтесь в любого солдата и участвуйте в перестрелке лично.</p>
+            <p>В основе игры — физика Active Ragdoll, поведение ИИ и динамические боевые взаимодействия. Каждая перестрелка проходит по-разному.</p>
+
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li>Sandbox Gameplay — спавн солдат двух команд и создание собственных сражений.</li>
+                    <li>Character Control — управление любым бойцом от первого или третьего лица.</li>
+                    <li>Active Ragdoll Physics — физическая реакция персонажей на движение, попадания и окружение.</li>
+                    <li>AI Soldiers — боты ищут укрытия, реагируют на обстрел и пытаются удержать равновесие.</li>
+                    <li>Damage & Blood System — система повреждений с эффектами крови и физической реакцией.</li>
+                    <li>Dynamic Combat — непредсказуемые столкновения между солдатами под управлением ИИ.</li>
+                </ul>
+            </div>
+
+            <div class="download-box">
+                <h3>Download</h3>
+                <p>Click download now to get access to the following files:</p>
+                <!-- ТУТ ССЫЛКА НА ТВОЙ ФАЙЛ -->
+                <a href="dummywarsetup.exe" class="download-btn" download>Download Now</a>
+                <div class="note">DummyWar Alpha 0.0.5 Hotfix1.exe — 392 MB</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 GuFugu. DummyWar is an experimental military sandbox.
+        </div>
+    </div>
+</body>
+</html>
